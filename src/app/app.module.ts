@@ -9,11 +9,13 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card'
 import {MatInputModule} from '@angular/material/input'
-import {MatButtonModule} from '@angular/material/button'
+import {MatButtonModule} from '@angular/material/button';
+import { TelaPrincipalComponent } from './tela-principal/tela-principal/tela-principal.component'
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    TelaPrincipalComponent
   ],
   imports: [
     BrowserModule,
