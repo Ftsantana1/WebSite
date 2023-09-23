@@ -1,8 +1,17 @@
+.table {
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 860px;
+  overflow: hidden;
+}
 
-body {
-    background-color: cyan;
-  }
-  
-.tela-principal {
-    background-color: cyan;
-  }
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+}

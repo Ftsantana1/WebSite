@@ -1,5 +1,13 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { ELEMENT_DATA, PeriodicElement } from 'src/app/utils';
 
 @Component({
   selector: 'app-tela-principal',
@@ -7,9 +15,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./tela-principal.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class TelaPrincipalComponent {
+export class TelaPrincipalComponent implements AfterViewInit {
   constructor(private router: Router) {}
-  botaoVoltar():void {
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  botaoVoltar(): void {
     this.router.navigate(['/tela-login']);
   }
 }
