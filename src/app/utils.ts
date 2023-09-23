@@ -28,3 +28,13 @@ export interface PeriodicElement {
     {position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K'},
     {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
   ];
+export interface Cliente {
+  id: number;
+  login: string;
+  senha: string
+}
+export const Cliente: Cliente[] = [
+  {id: 1, login: 'usuario1', senha: '1234'},
+  {id: 2, login: 'usuario2', senha: '1234'},
+  {id: 3, login: 'usuario3', senha: '1234'}
+];

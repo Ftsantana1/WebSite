@@ -13,7 +13,7 @@ import { ELEMENT_DATA, PeriodicElement } from 'src/app/utils';
   selector: 'app-tela-principal',
   templateUrl: './tela-principal.component.html',
   styleUrls: ['./tela-principal.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class TelaPrincipalComponent implements AfterViewInit {
   constructor(private router: Router) {}
