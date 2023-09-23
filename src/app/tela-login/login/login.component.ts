@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private router: Router) {}
-  darkMode = false;
+
+  constructor(private router: Router, private service: LoginService) {}
+
+  username: string = '';
+  password: string = '';
+  errorMessage: string = '';
+
   ngOnInit(): void {}
 
-  botaoParaTrocaTemaDeFundo(): void {
-    this.darkMode = !this.darkMode;
-  }
+  onLogin(username: string, password: string): void {
+    const isAuthenticated = this.service.login(username, password);
 
-  botaoLogin(): void {
-    this.router.navigate(['/tela-principal']);
+    if (isAuthenticated) {
+      this.router.navigate(['/tela-principal']);
+    } else {
+      window.alert('Usuário ou senha incorretos');
+      this.username = '';
+      this.password = ''; 
+    }
   }
 }

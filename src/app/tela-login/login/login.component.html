@@ -3,19 +3,19 @@
     <div class="card">
       <h2>Login</h2>
       <div class="input-container">
-        <input class="input" name="text" type="text" />
+        <input class="input" name="text" type="text" [(ngModel)]="username"/>
         <label class="label" for="input">Enter Your User*</label>
         <div class="topline"></div>
         <div class="underline"></div>
       </div>
       <div class="input-container">
-        <input class="input" name="text" type="text" />
+        <input class="input" name="text" type="text"  [(ngModel)]="password" />
         <label class="label" for="input">Password*</label>
         <div class="topline"></div>
         <div class="underline"></div>
       </div>
       <button 
-      (click)="botaoLogin()">
+      (click)="onLogin(username, password)">
         Sign up
         <div class="arrow-wrapper">
           <div class="arrow"></div>
