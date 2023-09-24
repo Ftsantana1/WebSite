@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin(username: string, password: string): void {
-    const isAuthenticated = this.service.login(username, password);
+    const usuarioAuth = this.service.login(username, password);
 
-    if (isAuthenticated) {
+    if (usuarioAuth) {
       this.router.navigate(['/tela-principal']);
     } else {
       window.alert('Usuário ou senha incorretos');

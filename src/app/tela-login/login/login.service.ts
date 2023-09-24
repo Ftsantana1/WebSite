@@ -9,25 +9,17 @@ export class LoginService {
 
   constructor() {}
   
-  private isLoggedIn = false;
+  private usuarioLogado = false;
 
   login(username: string, password: string): boolean {
-    const user = Cliente.find(cliente => cliente.login === username && cliente.senha === password);
+    const usuario = Cliente.find(cliente => cliente.login === username && cliente.senha === password);
 
-    if (user) {
-      this.isLoggedIn = true;
+    if (usuario) {
+      this.usuarioLogado = true;
       return true;
     } else {
-      this.isLoggedIn = false;
+      this.usuarioLogado = false;
       return false;
     }
-  }
-
-  logout(): void {
-    this.isLoggedIn = false;
-  }
-
-  isAuthenticated(): boolean {
-    return this.isLoggedIn;
   }
 }
