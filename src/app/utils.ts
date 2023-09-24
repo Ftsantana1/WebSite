@@ -31,10 +31,27 @@ export interface PeriodicElement {
 export interface Cliente {
   id: number;
   login: string;
-  senha: string
+  senha: string;
 }
 export const Cliente: Cliente[] = [
   {id: 1, login: 'usuario1', senha: '1234'},
   {id: 2, login: 'usuario2', senha: '1234'},
   {id: 3, login: 'usuario3', senha: '1234'}
 ];
+
+export interface DadosCliente {
+  id: number;
+  data: string;
+  valor: number;
+  gasto: string;
+  descricao: string;
+}
+
+export const DadosCliente: DadosCliente[] = [
+  {id:1 , data:'10/09/2023', valor: 60, gasto: 'Lanche', descricao: 'Rodizio de Pizza'},
+  {id:2 , data:'08/09/2023', valor: 20, gasto: 'Lanche', descricao: 'Hamburger '},
+  {id:3 , data:'15/09/2023', valor: 100, gasto: 'Lazer', descricao: 'Roupas'},
+  {id:4 , data:'20/09/2023', valor: 37, gasto: 'Variavel', descricao: 'Corte de Cabelo'},
+  {id:5 , data:'06/09/2023', valor: 15, gasto: 'Lanche', descricao: 'Açai'}
+
+]

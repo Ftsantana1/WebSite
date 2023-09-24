@@ -7,7 +7,7 @@ import {
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { ELEMENT_DATA, PeriodicElement } from 'src/app/utils';
+import { DadosCliente, ELEMENT_DATA, PeriodicElement } from 'src/app/utils';
 
 @Component({
   selector: 'app-tela-principal',
@@ -17,8 +17,12 @@ import { ELEMENT_DATA, PeriodicElement } from 'src/app/utils';
 })
 export class TelaPrincipalComponent implements AfterViewInit {
   constructor(private router: Router) {}
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  //displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  //dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['id', 'data', 'valor', 'gasto', 'descricao'];
+  dataSource = new MatTableDataSource<DadosCliente>(DadosCliente);
+  desabilitarPaginador = false;
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
