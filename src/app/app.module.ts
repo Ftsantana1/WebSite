@@ -15,11 +15,13 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { TelaPrincipalComponent } from './tela-principal/tela-principal/tela-principal.component'
 import { FormsModule } from '@angular/forms';
+import { TelaCadastroComponent } from './tela-cadastro/tela-cadastro.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TelaPrincipalComponent
+    TelaPrincipalComponent,
+    TelaCadastroComponent
   ],
   imports: [
     BrowserModule,

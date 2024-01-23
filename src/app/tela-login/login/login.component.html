@@ -14,14 +14,25 @@
         <div class="topline"></div>
         <div class="underline"></div>
       </div>
-      <button 
-      id="botaoDeLogin"
-      (click)="onLogin(username, password)">
-        Sign up
-        <div class="arrow-wrapper">
-          <div class="arrow"></div>
-        </div>
-      </button>
+
+      <div class="button-container">
+        <button 
+        id="botaoDeLogin"
+        (click)="login(username, password)">
+          Sign up
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+        <button 
+        id="botaoDeCadastro"
+        (click)="cadastro()">
+          Sign in
+          <div class="arrow-wrapper">
+            <div class="arrow"></div>
+          </div>
+        </button>
+      </div>
     </div>
   </body>
 </section>

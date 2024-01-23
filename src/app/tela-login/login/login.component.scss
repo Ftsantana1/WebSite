@@ -15,6 +15,8 @@ body {
   background: #e0e0e0;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .dark-mode {
@@ -112,6 +114,14 @@ button {
   align-items: center;
   gap: 0.6em;
   font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Ajuste a margem entre os botões conforme necessário */
+  margin-top: 20px; /* Ajuste a margem acima dos botões conforme necessário */
+  flex-direction: row; /* Mudar a orientação para linha */
+  justify-content: center;
 }
 
 button .arrow-wrapper {

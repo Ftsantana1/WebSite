@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onLogin(username: string, password: string): void {
+  login(username: string, password: string): void {
     const usuarioAuth = this.service.login(username, password);
 
     if (usuarioAuth) {
@@ -28,4 +28,8 @@ export class LoginComponent implements OnInit {
       this.password = ''; 
     }
   }
+
+  cadastro(): void {
+    this.router.navigate(['/tela-cadastro']);
+}
 }
