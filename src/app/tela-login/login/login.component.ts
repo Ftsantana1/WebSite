@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   password: string = '';
   errorMessage: string = '';
 
+  exibirModalCadastro = false;
+
   ngOnInit(): void {}
 
   login(username: string, password: string): void {
@@ -29,7 +31,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  cadastro(): void {
-    this.router.navigate(['/tela-cadastro']);
+abrirCadastro(): void {
+  this.exibirModalCadastro = true;
+}
+
+fecharCadastro(): void {
+  this.exibirModalCadastro = false;
 }
 }

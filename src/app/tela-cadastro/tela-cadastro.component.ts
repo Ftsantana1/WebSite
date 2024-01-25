@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tela-cadastro',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./tela-cadastro.component.scss']
 })
 export class TelaCadastroComponent {
+  @Output() fechar = new EventEmitter<void>(); // Adiciona este evento de saída
 
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  fecharModal(): void {
+    this.fechar.emit();
+  }
 }
