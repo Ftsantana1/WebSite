@@ -2,22 +2,22 @@
   <div class="modal">
     <h2>Cadastro</h2>
     <div class="input-container">
-      <input type="text" id="input" required="">
+      <input type="text" id="input" required="" [(ngModel)]="nome"/>
       <label for="input" class="label">Nome</label>
       <div class="linhaDoInput"></div>
     </div> 
     <div class="input-container">
-      <input type="text" id="input" required="">
+      <input type="text" id="input" required=""  [(ngModel)]="senha"/>
       <label for="input" class="label">Senha</label>
       <div class="linhaDoInput"></div>
     </div>
     <div class="button-container">
-      <button>Registar
+      <button (click)="registrarUsuario()">Registar
         <div class="arrow-wrapper">
           <div class="arrow"></div>
         </div>
       </button>
-      <button (click)="fecharModal()">Fechar
+      <button (click)="fecharModal()">Voltar
         <div class="arrow-wrapper">
           <div class="arrow"></div>
         </div></button>

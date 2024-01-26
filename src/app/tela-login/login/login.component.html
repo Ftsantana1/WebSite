@@ -3,14 +3,14 @@
     <div class="card">
       <h2>Login</h2>
       <div class="input-container">
-        <input class="input" name="text" type="text" id="username" [(ngModel)]="username"/>
-        <label class="label" for="input">Digite Seu Usuario*</label>
+        <input class="input" name="text" type="text" id="username" [(ngModel)]="usuario"/>
+        <label class="label" for="input">Digite Seu Usuario</label>
         <div class="topline"></div>
         <div class="underline"></div>
       </div>
       <div class="input-container">
-        <input class="input" name="text" type="text" id="password" [(ngModel)]="password" />
-        <label class="label" for="input">Digite Sua Senha*</label>
+        <input class="input" name="text" type="text" id="password" [(ngModel)]="senha" />
+        <label class="label" for="input">Digite Sua Senha</label>
         <div class="topline"></div>
         <div class="underline"></div>
       </div>
@@ -18,7 +18,7 @@
       <div class="button-container">
         <button 
         id="botaoDeLogin"
-        (click)="login(username, password)">
+        (click)="login(usuario, senha)">
           Entrar
           <div class="arrow-wrapper">
             <div class="arrow"></div>

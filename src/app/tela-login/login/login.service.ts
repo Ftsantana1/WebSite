@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { RegistroService } from 'src/app/registro.service';
 import { Cliente } from 'src/app/utils';
 
 @Injectable({
@@ -7,14 +8,15 @@ import { Cliente } from 'src/app/utils';
 })
 export class LoginService {
 
-  constructor() {}
+  constructor(private registro: RegistroService) {}
   
   private usuarioLogado = false;
 
   login(username: string, password: string): boolean {
-    const usuario = Cliente.find(cliente => cliente.login === username && cliente.senha === password);
+    const registroDeUsuarios = this.registro.recuperarRegistro();
+    const usuarioRegistro = registroDeUsuarios.find(usuario => usuario.login === username && usuario.senha === password);
 
-    if (usuario) {
+    if (usuarioRegistro) {
       this.usuarioLogado = true;
       return true;
     } else {

@@ -11,23 +11,22 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private service: LoginService) {}
 
-  username: string = '';
-  password: string = '';
-  errorMessage: string = '';
+  usuario: string = '';
+  senha: string = '';
 
   exibirModalCadastro = false;
 
   ngOnInit(): void {}
 
-  login(username: string, password: string): void {
-    const usuarioAuth = this.service.login(username, password);
+  login(usuario: string, senha: string): void {
+    const usuarioAutenticado = this.service.login(usuario, senha);
 
-    if (usuarioAuth) {
+    if (usuarioAutenticado) {
       this.router.navigate(['/tela-principal']);
     } else {
       window.alert('Usuário ou senha incorretos');
-      this.username = '';
-      this.password = ''; 
+      this.usuario = '';
+      this.senha = ''; 
     }
   }
 

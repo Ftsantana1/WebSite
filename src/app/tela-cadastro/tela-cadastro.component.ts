@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { RegistroService } from '../registro.service';
 
 @Component({
   selector: 'app-tela-cadastro',
@@ -8,9 +9,18 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class TelaCadastroComponent {
   @Output() fechar = new EventEmitter<void>(); // Adiciona este evento de saída
 
-  constructor() {}
+  constructor(private registro: RegistroService) {}
 
-  ngOnInit(): void {}
+  nome = '';
+  senha = '';
+  
+  registrarUsuario(): void {
+    const dadosRegistro = { login: this.nome, senha: this.senha };
+    console.log('Chegou aqui?');
+    console.log('Oque ta passando aqui?',dadosRegistro);
+    this.registro.registroDeUsuario(dadosRegistro);
+    this.fecharModal();
+  }
 
   fecharModal(): void {
     this.fechar.emit();
