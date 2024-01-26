@@ -49,6 +49,46 @@
     font-size: 16px;
     color: #333;
   }
+
+  .input-container-password {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+  }
+  
+  .input-container-password input[type="password"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    transition: width 0.3s ease;
+  }
+
+  .input-container-password mat-icon {
+    position: absolute;
+    top: 10px; /* Ajuste a posição conforme necessário */
+    right: 0;
+    cursor: pointer;
+  }
+  
+  .input-container-password .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .input-container-password input[type="password"]:focus ~ .label,
+  .input-container-password input[type="password"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
   
   .input-container .linhaDoInput {
     position: absolute;

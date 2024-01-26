@@ -13,7 +13,8 @@ export class TelaCadastroComponent {
 
   nome = '';
   senha = '';
-  
+  hide = true;
+
   registrarUsuario(): void {
     const dadosRegistro = { login: this.nome, senha: this.senha };
     console.log('Chegou aqui?');

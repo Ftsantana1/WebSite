@@ -6,10 +6,13 @@
       <label for="input" class="label">Nome</label>
       <div class="linhaDoInput"></div>
     </div> 
-    <div class="input-container">
-      <input type="text" id="input" required=""  [(ngModel)]="senha"/>
-      <label for="input" class="label">Senha</label>
-      <div class="linhaDoInput"></div>
+    <div class="input-container-password">
+      <div class="input-container">
+        <input  type="{{ hide ? 'password' : 'text' }}" id="input" required=""  [(ngModel)]="senha">
+          <mat-icon (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <label for="input" class="label">Senha</label>
+        <div class="linhaDoInput"></div>
+      </div>
     </div>
     <div class="button-container">
       <button (click)="registrarUsuario()">Registar
