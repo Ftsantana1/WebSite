@@ -16,12 +16,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { TelaPrincipalComponent } from './tela-principal/tela-principal/tela-principal.component'
 import { FormsModule } from '@angular/forms';
 import { TelaCadastroComponent } from './tela-cadastro/tela-cadastro.component';
+import { TelaConstrucaoComponent } from './tela-construcao/tela-construcao.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TelaPrincipalComponent,
-    TelaCadastroComponent
+    TelaCadastroComponent,
+    TelaConstrucaoComponent
   ],
   imports: [
     BrowserModule,
