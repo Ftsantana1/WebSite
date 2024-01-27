@@ -17,13 +17,15 @@ import { TelaPrincipalComponent } from './tela-principal/tela-principal/tela-pri
 import { FormsModule } from '@angular/forms';
 import { TelaCadastroComponent } from './tela-cadastro/tela-cadastro.component';
 import { TelaConstrucaoComponent } from './tela-construcao/tela-construcao.component';
+import { TelaConstrucao2Component } from './tela-construcao/tela-construcao2';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TelaPrincipalComponent,
     TelaCadastroComponent,
-    TelaConstrucaoComponent
+    TelaConstrucaoComponent,
+    TelaConstrucao2Component
   ],
   imports: [
     BrowserModule,

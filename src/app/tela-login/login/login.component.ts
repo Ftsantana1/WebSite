@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
     if (usuarioAutenticado) {
       //this.router.navigate(['/tela-principal']);
-      this.router.navigate(['/tela-construcao']);
+      this.router.navigate(['/tela-construcao2']);
       
     } else {
       window.alert('Usuário ou senha incorretos');
@@ -32,11 +32,11 @@ export class LoginComponent implements OnInit {
     }
   }
 
-abrirCadastro(): void {
-  this.exibirModalCadastro = true;
-}
+  abrirCadastro(): void {
+    this.exibirModalCadastro = true;
+  }
 
-fecharCadastro(): void {
-  this.exibirModalCadastro = false;
-}
+  fecharCadastro(): void {
+    this.exibirModalCadastro = false;
+  }
 }
