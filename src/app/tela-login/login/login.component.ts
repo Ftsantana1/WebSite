@@ -22,8 +22,10 @@ export class LoginComponent implements OnInit {
     const usuarioAutenticado = this.service.login(usuario, senha);
 
     if (usuarioAutenticado) {
-      //this.router.navigate(['/tela-principal']);
-      this.router.navigate(['/tela-construcao2']);
+      this.router.navigate(['/tela-construcao']);
+      setTimeout(() => {
+        this.router.navigate(['/tela-construcao2']);
+      }, 4000)
       
     } else {
       window.alert('Usuário ou senha incorretos');
